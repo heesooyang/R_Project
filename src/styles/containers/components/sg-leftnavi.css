@@ -1,0 +1,11 @@
+.nav__wrap {
+  background-color: gray;
+  width: 255px;
+  height: 100%; }
+  .nav__wrap .nav__logowrap {
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+    height: 70px; }
+
+/*# sourceMappingURL=sg-leftnavi.css.map */

@@ -1,0 +1,37 @@
+.pages__managetemp{
+  position: relative;
+  padding: 20px;
+
+  h1{
+    font-size: 20px;
+  }
+  .managetemp__new{
+    float: right;
+  }
+  .managetemp__search{
+    margin: 20px 50px 20px 0;
+    position: relative;
+    display: inline-block;
+    color: red;
+
+    .managetemp__searchtitle{
+      margin-bottom: 5px;
+    }
+  }
+  .managetemp__btnwrap{
+    .managetemp__searchbtn{
+      background-color: #28a745;
+      border-radius: 4px;
+    }
+    .managetemp__resetbtn{
+      border-radius: 4px;
+      margin-left: 20px;
+
+    }
+  }
+}
+.pages__managetemp::after{
+  clear: both;
+  content: "";
+  display: block;
+}
