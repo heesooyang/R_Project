@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAmB;EACjB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,KAAK;EAEvB,mCAAiB;IACf,KAAK,EAAE,GAAG;IACV,OAAO,EAAE,YAAY;EAEvB,4CAA0B;IACxB,WAAW,EAAE,IAAI;IACjB,OAAO,EAAE,YAAY;IACrB,KAAK,EAAE,GAAG;IACV,8EAAiC;MAC/B,KAAK,EAAE,KAAK",
+"sources": ["sg-modifytemplate.scss"],
+"names": [],
+"file": "sg-modifytemplate.css"
+}

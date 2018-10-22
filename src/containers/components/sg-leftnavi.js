@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-
-
+import { NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import SgNewTemp from './sg-newtemplate'
+import SgManageTemp from './sg-managetemplate'
+import SgSendMsg from './sg-sendmessage'
 // import { connect } from 'react-redux'
 // import { bindActionCreators } from 'redux'
 
@@ -8,7 +11,7 @@ import React, { Component } from 'react'
 export default class SgLeftNavi extends Component {
 constructor(props) {
   super(props);
-  this.state = [];
+  this.state = "";
 
 }
   // setTerm(){
@@ -27,12 +30,13 @@ constructor(props) {
         TITLE
       </div>
         <ul className="nav__firstmenu">
-          <li>발송서비스</li>
+          <li className="nav__item" activeClassName="active">발송서비스</li>
           <ul className="nav_secondmenu">
-            <li>템플릿 관리</li>
-            <li>메시지 발송</li>
-            <li>서비스 설정</li>
+            <li><NavLink className="nav__item" activeClassName="active" exact to="/">템플릿 관리</NavLink></li>
+            <li><NavLink className="nav__item" activeClassName="active" to="/sendMsg">메시지 발송</NavLink></li>
           </ul>
+          <li>서비스 설정</li>
+
         </ul>
       </nav>
     );

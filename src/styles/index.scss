@@ -70,10 +70,19 @@ body{
   line-height: 1.5;
   height: 100%;
 }
-
+.contents{
+  position: relative;
+  margin-left: 255px;
+  padding-top: 80px;
+  height: 100%;
+  background-color: #ebedf2;
+  overflow: scroll;
+}
 button:disabled {
   opacity: 0.5;
 }
 
 @import "./containers/components/sg-contents","./containers/components/sg-leftnavi","./containers/components/sg-header","./containers/components/sg-header";
-@import "./containers/components/sg-managetemplete","./containers/components/sg-table";
+@import "./containers/components/sg-managetemplete","./containers/components/sg-table","./containers/components/sg-newtemplate","./containers/components/sg-sendmessage";
+@import "./containers/components/sg-sendmessage-selecttemp","./containers/components/sg-sendmessage-selectuser","./containers/components/sg-replacementstable","./containers/components/sg-replacementsform";
+@import "./containers/components/sg-modifytemplate";

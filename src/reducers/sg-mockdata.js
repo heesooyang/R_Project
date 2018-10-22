@@ -1,7 +1,7 @@
 export default function() {
   return [
     {
-      "authorId": 2,
+      "authorId": 1,
       "key": "templateKey123",
       "title": "인증번호",
       "body": "인증번호 문자 입니다. 인증번호는 :keyword: 입니다.",
@@ -26,7 +26,7 @@ export default function() {
           "title": "인증번호",
           "maxByte": "최대길이",
           "default": "기본 변환값",
-          "isEssential": true,
+          "isEssential": false,
           "keyword": "auth_number"
         }
       ]

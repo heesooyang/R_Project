@@ -1,23 +1,19 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
 import SgLeftNavi from '../components/sg-leftnavi'
 import SgHeader from '../components/sg-header'
 import SgContents from '../components/sg-contents'
 import About from '../about'
+import SgNewTemp from '../components/sg-newtemplate'
+import SgManageTemp from '../components/sg-managetemplate'
+import SgSendMsg from '../components/sg-sendmessage'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 
 const App = () => (
   <div className="app">
-    {/*<header>*/}
-    {/*<Link to="/">Home</Link>*/}
-    {/*<Link to="/about-us">About</Link>*/}
-    {/*</header>*/}
+      <SgHeader />
+      <SgLeftNavi />
+        <SgContents/>
 
-    <SgHeader />
-    <SgLeftNavi />
-    <SgContents />
-
-    {/*<Route exact path="/" component={SgHome} />*/}
-    {/*<Route exact path="/about-us" component={About} />*/}
 
   </div>
 )

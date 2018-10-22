@@ -1,0 +1,20 @@
+.pages__sendmsg{
+  background-color: white;
+  margin: 0 20px;
+  .sendmsg__nav{
+    //display: inline-block;
+    float: left;
+
+    padding-right: 20px;
+  }
+  .sendmsg__content{
+    display: inline-block;
+    padding-left: 20px;
+    width: 80%;
+    border-left: 1px solid black;
+
+    .sendmsg__searchwrap{
+      width: 80%;
+    }
+  }
+}

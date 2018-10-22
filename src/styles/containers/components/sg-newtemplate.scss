@@ -1,0 +1,20 @@
+.pages__newtemp {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+
+  .pages__textarea {
+    width: 50%;
+    display: inline-block;
+  }
+  .newtemp__replacements {
+    margin-left: 20px;
+    display: inline-block;
+    width: 48%;
+    .newtemp__replacements__addbtn{
+      float: right;
+    }
+
+  }
+}

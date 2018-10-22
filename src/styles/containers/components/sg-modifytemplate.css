@@ -1,0 +1,16 @@
+.pages__modifytemp {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  background-color: white; }
+  .pages__modifytemp .pages__textarea {
+    width: 50%;
+    display: inline-block; }
+  .pages__modifytemp .modifytemp__replacements {
+    margin-left: 20px;
+    display: inline-block;
+    width: 48%; }
+    .pages__modifytemp .modifytemp__replacements .modifytemp__replacements__addbtn {
+      float: right; }
+
+/*# sourceMappingURL=sg-modifytemplate.css.map */

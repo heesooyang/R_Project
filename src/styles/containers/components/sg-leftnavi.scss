@@ -17,6 +17,25 @@
   }
   .nav__firstmenu{
     text-indent: 16px;
+    .nav__item:hover{
+      background-color: #868aa8;
+    }
+    .nav__item:active, .nav__item.active{
+      background-color: #868aa8;
+    }
+    .nav__item{
+      text-decoration : none;
+      color: white;
+    }
+    .nav__secondmenu{
+      text-indent: 20px;
+
+
+    }
+    .nav__item{
+
+    }
   }
+
 
 }
