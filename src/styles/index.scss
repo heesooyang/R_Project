@@ -86,3 +86,10 @@ button:disabled {
 @import "./containers/components/sg-managetemplete","./containers/components/sg-table","./containers/components/sg-newtemplate","./containers/components/sg-sendmessage";
 @import "./containers/components/sg-sendmessage-selecttemp","./containers/components/sg-sendmessage-selectuser","./containers/components/sg-replacementstable","./containers/components/sg-replacementsform";
 @import "./containers/components/sg-modifytemplate";
+
+//ant
+
+@import "~antd/dist/antd.css";
+@import "./containers/components/custom/input/input","./containers/components/custom/input/textarea", "./containers/components/custom/input/search";
+@import "./containers/components/custom/table","./containers/components/custom/pagination";
+@import "./containers/components/custom/button/button";
