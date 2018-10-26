@@ -1,13 +1,18 @@
 import React, {Component} from 'react'
 import SgTable from './sg-table'
 import SgCustomTable from './custom/table'
-import SgCustomInput from './custom/input/input'
-import {Input, Col, Button, Icon, Pagination} from 'antd'
-import SgCustomButton from './custom/button/button'
+import SgCustomInput from './custom/inputs/input'
+import {Input, Col, Button, Icon, Pagination, Steps,} from 'antd'
+import SgCustomButton from './custom/buttons/button'
 import SgCustomPagination from './custom/pagination'
-
+import SgCustomSteps from './custom/steps'
+import SgCustomPopover from './custom/popover'
+import SgCustomAlert from './custom/alert'
+import SgCustomTag from './custom/tag'
 
 const {TextArea, Search,Group} = Input;
+const {SgCustomStep} = SgCustomSteps;
+const {Step} = Steps;
 const {SgCustomTextArea, SgCustomSearch} = SgCustomInput;
 
 
@@ -19,9 +24,104 @@ export default class SgManageTemp extends Component{
   }
 
   render() {
+
+
+    const columns = [{
+      title: '제목',
+      dataIndex: 'title',
+      key: 'title',
+      render: text => <SgCustomInput defaultValue={text}/>,
+    }, {
+      title: 'Keyword',
+      dataIndex: 'keyword',
+      key: 'keyword',
+    }, {
+      title: '최대 Byte',
+      dataIndex: 'maxByte',
+      key: 'maxByte',
+    }, {
+      title: '초기값',
+      key: 'tags',
+      dataIndex: 'tags',
+      render: tags => (
+        <span>
+      {tags.map(tag => <SgCustomTag color="blue" key={tag}>{tag}</SgCustomTag>)}
+    </span>
+      ),
+    }, {
+      title: '제거',
+      key: 'action',
+      render: (text, record) => (
+        <Button type="danger">X</Button>
+      ),
+    }];
+
+    const data = [{
+      key: '1',
+      title: 'John Brown',
+      keyword: 32,
+      maxByte: '4',
+      tags: ['nice', 'developer'],
+    }, {
+      key: '2',
+      title: 'Jim Green',
+      keyword: 42,
+      maxByte: '4',
+      tags: ['loser'],
+    }, {
+      key: '3',
+      title: 'Joe Black',
+      keyword: 32,
+      maxByte: '4',
+      tags: ['cool', 'teacher'],
+    }];
+
+    const rowSelection= {
+      onChange: (selectedRowKeys, selectedRows) => {
+        console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+      },
+      getCheckboxProps: record => ({
+        disabled: record.title === 'Disabled User', // Column configuration not to be checked
+        name: record.title,
+      }),
+    };
+    const pagination = {
+      pageSize:2
+    }
+
+
+
     return(
       <section className="pages__managetemp">
         <h1>템플릿 관리</h1>
+        <SgCustomTag color="red">SMS</SgCustomTag>
+        <SgCustomAlert message="customAlert(type=custom) test" type="custom" showIcon icon={<Icon type="forward" theme="outlined" />} closable/>
+        <SgCustomAlert message="customAlert(type=error) test" type="error" showIcon closable/>
+        <SgCustomPopover title="error" content="에러발생" trigger="click">
+          <SgCustomInput placeholder="custompopover test"/>
+        </SgCustomPopover>
+
+
+        <SgCustomSteps direction="vertical" current={2}>
+          <SgCustomStep title="Finished" description="템플릿생성"/>
+          <SgCustomStep title="in Progress" description="문자메시지작성"/>
+          <SgCustomStep title="waiting" description="수신자선택"/>
+          <SgCustomStep title="waiting" description="문자발송"/>
+        </SgCustomSteps>
+        <SgCustomSteps current={1}>
+          <SgCustomStep title="Finished" description="템플릿생성"/>
+          <SgCustomStep title="in Progress" description="문자메시지작성"/>
+          <SgCustomStep title="waiting" description="수신자선택"/>
+          <SgCustomStep title="waiting" description="문자발송"/>
+        </SgCustomSteps>
+        <Steps current={1}>
+          <Step title="Finished" description="템플릿생성"/>
+          <Step title="in Progress" description="문자메시지작성"/>
+          <Step title="waiting" description="수신자선택"/>
+          <Step title="waiting" description="문자발송"/>
+        </Steps>
+        <Steps current={1}/>
+
         <Button type="primary" icon="search" >btn test</Button>
         <SgCustomButton>custom basic</SgCustomButton>
         <SgCustomButton type="custom" icon="search">custom style btn test</SgCustomButton>
@@ -39,10 +139,11 @@ export default class SgManageTemp extends Component{
             <Input defaultValue="input group test" />
           </Col>
         </Group>
-        <TextArea value="textarea test"/>
+        <TextArea defaultValue="textarea test"/>
         <SgCustomTextArea value="customtextarea test"/>
 
-        <SgCustomTable/>
+             <SgCustomTable rowSelection={rowSelection} columns={columns} dataSource={data} pagination={pagination}/>
+
         <Input size="large" placeholder="input test"/>
         <SgCustomInput size="large" placeholder="custominput test"/>
         <Search placeholder="search test" enterButton/>

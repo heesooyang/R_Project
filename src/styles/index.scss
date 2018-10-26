@@ -28,49 +28,55 @@ time, mark, audio, video {
   //font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
   // background-color: #f4f5f8;
   overflow-y: hidden;
 }
+
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: NanumSquareR;
 }
 
-
 #root, .app {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif;
+  sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   height: 100%;
 }
-.contents{
+
+.contents {
   position: relative;
   margin-left: 255px;
   padding-top: 80px;
@@ -78,18 +84,14 @@ body{
   background-color: #ebedf2;
   overflow: scroll;
 }
+
 button:disabled {
   opacity: 0.5;
 }
 
-@import "./containers/components/sg-contents","./containers/components/sg-leftnavi","./containers/components/sg-header","./containers/components/sg-header";
-@import "./containers/components/sg-managetemplete","./containers/components/sg-table","./containers/components/sg-newtemplate","./containers/components/sg-sendmessage";
-@import "./containers/components/sg-sendmessage-selecttemp","./containers/components/sg-sendmessage-selectuser","./containers/components/sg-replacementstable","./containers/components/sg-replacementsform";
+@import "./containers/components/sg-contents", "./containers/components/sg-leftnavi", "./containers/components/sg-header", "./containers/components/sg-header";
+@import "./containers/components/sg-managetemplete", "./containers/components/sg-table", "./containers/components/sg-newtemplate", "./containers/components/sg-sendmessage";
+@import "./containers/components/sg-sendmessage-selecttemp", "./containers/components/sg-sendmessage-selectuser", "./containers/components/sg-replacementstable", "./containers/components/sg-replacementsform";
 @import "./containers/components/sg-modifytemplate";
 
-//ant
-
-@import "~antd/dist/antd.css";
-@import "./containers/components/custom/input/input","./containers/components/custom/input/textarea", "./containers/components/custom/input/search";
-@import "./containers/components/custom/table","./containers/components/custom/pagination";
-@import "./containers/components/custom/button/button";
+@import "containers/components/custom/index";

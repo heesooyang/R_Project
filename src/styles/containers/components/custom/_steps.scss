@@ -1,0 +1,30 @@
+.customsteps{
+  //스텝 라벨 변경
+  .ant-steps-item-icon{
+    border-radius: 0px;
+  }
+
+  //활성화된 스텝 라벨변경
+  .ant-steps-item-process {
+    .ant-steps-item-icon{
+      border-color: #716aca;
+      background: #716aca;
+    }
+  }
+
+  //지난 스텝 라벨변경
+  .ant-steps-item-finish{
+    // 스텝 사이줄
+    .ant-steps-item-tail:after{
+      background-color: #716aca;
+    }
+    //스텝box
+    .ant-steps-item-icon{
+      border-color: #716aca;
+      //스텝 내부
+      .ant-steps-icon{
+        color: #716aca;
+      }
+    }
+  }
+}
